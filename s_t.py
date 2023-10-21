@@ -24,16 +24,10 @@ st.image(image)
 
 st.write("Toca el Botón y habla lo que quires traducir")
 
-stt_button = st.file_uploader("Choose a mp3 file")
+ st.file_uploader("Choose a mp3 file")
 
 
-result = streamlit_bokeh_events(
-    stt_button,
-    events="GET_TEXT",
-    key="listen",
-    refresh_on_update=False,
-    override_height=75,
-    debounce_time=0)
+result = st.file_uploader("Choose a mp3 file")
 
 if result:
     if "GET_TEXT" in result:
